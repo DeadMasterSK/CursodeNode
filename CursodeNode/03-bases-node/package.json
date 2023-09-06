@@ -9,6 +9,7 @@
   "author": "Ernesto Chicas",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "yargs": "^17.7.2"
   }
 }

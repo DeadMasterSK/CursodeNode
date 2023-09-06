@@ -1,11 +1,9 @@
 const { crearAchivo } = require('./helpers/multiplicar');
+const argv = require('./config/yargs');
+
 
 console.clear();
-const [ , , arg3] = process.argv;
-const [ , base] = arg3.split('=');
-console.log(base);
 
-//const base = 4;
-crearAchivo(base)
+crearAchivo( argv.b, argv.l, argv.h)
   .then(nombreArchivo => console.log(nombreArchivo,'Creado'))
-  .catch( err => console.log(err))
+  .catch( err => console.log(err))//const base = 4;
