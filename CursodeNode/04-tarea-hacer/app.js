@@ -1,13 +1,16 @@
+const { inquirerMenu, pausa } = require('./helper/inquirer.js');
+const inquirer = require('inquirer');
+
 require('colors');
-const { mostrarMenu, pausa } = require('./helper/mensajes');
 
 const main = async() => {
   console.clear;
   let opt = ''
   do {
-    opt =await mostrarMenu();
+    opt =await inquirerMenu();
     console.log({opt});
-    if (opt !== '0') await pausa();
+    await pausa();
+
     
   } while (opt !== '0');
 }
